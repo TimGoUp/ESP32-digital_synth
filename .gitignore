@@ -1,0 +1,10 @@
+build/
+esp/build/
+esp/sdkconfig
+esp/sdkconfig.old
+esp/managed_components/
+.vscode/
+.cache/
+*.wav
+*.exe
+*.o

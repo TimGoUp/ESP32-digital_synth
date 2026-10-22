@@ -1,0 +1,6 @@
+if(ESP_PLATFORM)
+  idf_component_register(INCLUDE_DIRS ".")
+else()
+  add_library(synth_core INTERFACE)
+  target_include_directories(synth_core INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
