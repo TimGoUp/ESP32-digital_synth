@@ -1,6 +1,8 @@
 #pragma once
 #include <cmath>
 
+constexpr float PI = 6.28318530718f;
+
 // 4 osnovne oblike valov
 enum class Waveform {
   SINE,
@@ -61,7 +63,7 @@ class Oscillator {
         break;
 
       case Waveform::SINE:
-        out = std::sin(phase_ * 6.28318530718f); //pi je napisan kot float, ker esp nima double števil
+        out = std::sin(phase_ * PI); //pi je napisan kot float, ker esp nima double števil
         break;
     }
 
