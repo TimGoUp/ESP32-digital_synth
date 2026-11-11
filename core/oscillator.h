@@ -1,4 +1,3 @@
-#pragma once
 #include <cmath>
 
 constexpr float PI = 3.14159265358979323846f;
@@ -58,9 +57,12 @@ class Oscillator {
         out = (phase_ < pulseWidth_) ? 1.0f : -1.0f;
         break;
 
-      case Waveform::TRIANGLE:
-        out = 4.0f * std::abs(phase_ - 0.5f) - 1.0f;
+      case Waveform::TRIANGLE: {
+        float p = phase_ + 0.25f;
+        if (p >= 1.0f) p -= 1.0f;
+        out = 4.0f * std::abs(p - 0.5f) - 1.0f;
         break;
+      }
 
       case Waveform::SINE:
         out = std::sin(phase_ * PI); //pi je napisan kot float, ker esp nima double števil

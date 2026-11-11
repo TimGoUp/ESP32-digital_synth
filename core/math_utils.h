@@ -3,7 +3,6 @@
 #include <cstdint>
 #include <algorithm>
 
-constexpr float PI = 3.14159265358979323846f; 
 
 // Pretvorba MIDI note (0 - 127) v frekvenco v Hz
 inline float midiToFreq(uint8_t note) {
