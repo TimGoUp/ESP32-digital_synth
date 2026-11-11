@@ -40,10 +40,12 @@ class Envelope {
   }
 
   // note on/off
-  void gate(bool on) {
-    if (on) {
-      status_ = EnvStatus::ATTACK;
-    } else if (status_ != EnvStatus::IDLE) {
+  void noteOn() {
+    status_ = EnvStatus::ATTACK;
+  }
+
+  void noteOff() {
+    if (status_ != EnvStatus::IDLE) {
       status_ = EnvStatus::RELEASE;
     }
   }

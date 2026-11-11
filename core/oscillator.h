@@ -1,7 +1,7 @@
 #pragma once
 #include <cmath>
 
-constexpr float PI = 6.28318530718f;
+constexpr float PI = 3.14159265358979323846f;
 
 // 4 osnovne oblike valov
 enum class Waveform {
